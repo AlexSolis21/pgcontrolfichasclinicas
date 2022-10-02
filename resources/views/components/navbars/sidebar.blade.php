@@ -66,6 +66,16 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link text-white {{ Route::currentRouteName() == 'citas' ? ' active bg-gradient-primary' : '' }} "
+                    href="{{ route('citas') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">person</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Cita Medica</span>
+                </a>
+            </li>
+
             {{-- <li class="nav-item">
                 <a class="nav-link text-white {{ Route::currentRouteName() == 'tables' ? ' active bg-gradient-primary' : '' }} "
                     href="{{ route('tables') }}">

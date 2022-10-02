@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\ExampleLaravel\UserProfile;
 use App\Http\Livewire\Pages\ClientsManagement;
+use App\Http\Livewire\Pages\DatesManagement;
 use App\Http\Livewire\Pages\PatientManagement;
 use App\Http\Livewire\Pages\UserManagement;
 
@@ -42,6 +43,7 @@ Route::get('usuarios', UserManagement::class)->name('usuarios');
 Route::get('dashboard', Dashboard::class)->name('dashboard');
 Route::get('clientes', ClientsManagement::class)->name('clientes');
 Route::get('pacientes', PatientManagement::class)->name('pacientes');
+Route::get('citas', DatesManagement::class)->name('citas');
 
 });
 
