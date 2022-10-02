@@ -39,7 +39,7 @@ class PatientManagement extends Component
         $validatedData = $this->validate();
 
         Patient::create($validatedData);
-        session()->flash('message', 'Usuario creado correctamente');
+        session()->flash('message', 'Paciente Creado Correctamente');
         $this->resetInput();
         $this->dispatchBrowserEvent('close-modal');
     }

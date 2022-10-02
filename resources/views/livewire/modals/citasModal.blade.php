@@ -1,5 +1,5 @@
 <!-- Insert Modal -->
-<div wire:ignore.self class="modal fade" id="patientModal" tabindex="-1" aria-labelledby="patientModalLabel"
+<div wire:ignore.self class="modal fade" id="citastModal" tabindex="-1" aria-labelledby="citasModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -8,7 +8,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                     wire:click="closeModal"></button>
             </div>
-            <form wire:submit.prevent="savePatient">
+            <form wire:submit.prevent="saveCitas">
                 <div class="modal-body">
                     <div class="mb-3">
                         <label>Fecha De La Cita</label>
@@ -36,9 +36,9 @@
 
 
                     <div class="mb-3">
-                        <label>Apellidos</label>
-                        <input type="text" wire:model.lazy="apellidos" class="form-control form-bord">
-                        @error('apellidos')
+                        <label>patient_id</label>
+                        <input type="text" wire:model.lazy="patient_id" class="form-control form-bord">
+                        @error('patient_id')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
                     </div>
@@ -48,26 +48,26 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" wire:click="closeModal"
                         data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-<!-- Delete Patient Modal -->
-<div wire:ignore.self class="modal fade" id="deletePatientModal" tabindex="-1"
-    aria-labelledby="deletePatientModalLabel" aria-hidden="true">
+<!-- Delete Citas Modal -->
+<div wire:ignore.self class="modal fade" id="deleteCitasModal" tabindex="-1"
+    aria-labelledby="deleteCitasModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deletePatientModalLabel">Eliminar Cita</h5>
+                <h5 class="modal-title" id="deleteCitasModalLabel">Eliminar Cita</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" wire:click="closeModal"
                     aria-label="Close"></button>
             </div>
-            <form wire:submit.prevent="destroyPatient">
+            <form wire:submit.prevent="destroyCitas">
                 <div class="modal-body">
-                    <h4>¿Está seguro de que quiere eliminar estos datos?</h4>
+                    <h4>¿Está seguro de que quiere eliminar la cita?</h4>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" wire:click="closeModal"
