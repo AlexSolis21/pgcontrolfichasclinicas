@@ -1,6 +1,6 @@
 <div>
 
-    @include('livewire.modals.CitasModal')
+    @include('livewire.modals.citasModal')
 
     <div class="container">
         <div class="row">
@@ -40,12 +40,12 @@
                                     <td>{{ $date->descripcion }}</td>
                                     <td>{{ $date->patient_id }}</td>
                                     <td>
-                                        <button type="button" data-bs-toggle="modal" data-bs-target="#updateDatesModal"
-                                            wire:click="editDates({{ $dates->id }})" class="btn btn-primary">
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#updateCitasModal"
+                                            wire:click="editDates({{ $citas->id }})" class="btn btn-primary">
                                             Editar
                                         </button>
-                                        <button type="button" data-bs-toggle="modal" data-bs-target="#deleteDatesModal"
-                                            wire:click="deleteDates({{ $dates->id }})"
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#deleteCitasModal"
+                                            wire:click="deleteCitas({{ $citas->id }})"
                                             class="btn btn-danger">Eliminar</button>
                                     </td>
                                 </tr>
@@ -66,13 +66,13 @@
     </div>
     <script>
         window.addEventListener('close-modal', event => {
-            const datesModal = document.getElementById('datestModal');
-            const updateDatesModal = document.getElementById('updateDatesModal');
-            const deleteDatesModal = document.getElementById('deleteDatesModal');
+            const citasModal = document.getElementById('citastModal');
+            const updateCitasModal = document.getElementById('updateCitasModal');
+            const deleteCitasModal = document.getElementById('deleteCitasModal');
 
-            const modal1 = bootstrap.Modal.getInstance(datesModal)
-            const modal2 = bootstrap.Modal.getInstance(updateDatesModal)
-            const modal3 = bootstrap.Modal.getInstance(deleteDatesModal)
+            const modal1 = bootstrap.Modal.getInstance(citasModal)
+            const modal2 = bootstrap.Modal.getInstance(updateCitasModal)
+            const modal3 = bootstrap.Modal.getInstance(deleteCitasModal)
 
             if (modal1 != null) modal1.hide();
             if (modal2 != null) modal2.hide();

@@ -18,8 +18,8 @@ return new class extends Migration
             $table->date('fecha_cita');
             $table->time('hora_cita');
             $table->string('descripcion');
-            $table->unsignedBigInteger('patient_id');
-            $table->foreign('patient_id')->references('id')->on('patients');
+            $table->string('patient_id');
+            //$table->foreign('patient_id')->references('id')->on('patients');
             $table->timestamps();
 
         });
